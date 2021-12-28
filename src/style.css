@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-content: center;
+}
+
+/* style for team info inside header */
+.team-info {
+    display: flex;
+    margin: 50px 60px;
+}
+
+.team-info .team-title {
+    flex: 1;
+    font-family: 'PT Serif', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: -0.045em;
+}
+
+.team-info .team-description {
+    flex: 1;
+}
+
+.team-info .team-description .team-description-title {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.team-info .team-description .team-description-paragraph {
+    width: 70%;
+}
+
+/* style for main */
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.team-members {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2%;
+}
+
+.team-members .team-member {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.team-members .team-member .imageAndRole {
+    display: flex;
+}
+
+.team-members .team-member .role {
+    font-family: 'PT Serif', sans-serif;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.team-members .team-member .name {
+    font-weight: 600;
+}
+
+.team-members img {
+    height: auto;
+    width: 100%;
+}
+
+.team-members .team-member:nth-child(2), .team-members .team-member:nth-child(5) {
+    margin: 20% auto 10% auto;
+}
+
+/* style for footer */
+footer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #A9A9A9;
+    margin-top: 114px;
+}
+
+footer .created-by {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+footer .author {
+    font-weight: bold;
+    color: #A9A9A9;
+}
+
+@media screen and (max-width: 1500px) {
+    .container {
+        padding: 10px 50px;      /* add a padding if screen is small, here it can not use margin (container becomes bigger if it's margin) */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team-info {
+        display: block;
+        margin: 40px 10px;
+    }
+
+    .team-info .team-description .team-description-paragraph {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .team-info .team-description .team-description-title {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .team-members {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-members .team-member .name {
+        font-size: 14px;
+    }
+
+    .team-members .team-member .role {
+        font-size: 10px;
+    }
+
+    .team-members .team-member:nth-child(5) {
+        margin: 0 auto;
+    }
+
+    .team-members .team-member:nth-child(4), .team-members .team-member:nth-child(6) {
+        margin: 20% auto 10% auto;
+    }
+}
+
+/* NOTES:
+1. To contain an image inside its parent, use width: 100%.
+2. Add padding to a container if ant its content to become narrower, not margin, this is for code on line 111.
+*/
+
+
